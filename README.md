@@ -55,8 +55,6 @@ Remark: All frameworks are briefly described and more in-depth information will 
 The idea behind Robotium is that a functional test should description what the user sees and can do. This framework is a good choice if you are just “black box” testing your application. Besides extensive documentation, there are some well described examples available and the API is easy to use.
 
 An example of how a Robotium test could look like:
-
-
 <code><pre>mSolo.assertCurrentActivity("Started", MainActivity.class);
 mSolo.clickOnText("7");
 mSolo.clickOnText("×");
@@ -69,7 +67,6 @@ assertTrue(mSolo.waitForText("42"));</code></pre>
 Calabash is a functional testing framework that can be used for both iOS and Android functional testing. On paper it must be one of the easiest frameworks to use and even non-developers should be able to create functional tests using it. In a future blog post you will figure out why we find that this is not completely true.
 
 To get you interested in the ease of Calabash though this is a little example of how a functional test could look like:
-
 
         Given My app is running
         When I press the "7" button
@@ -91,20 +88,19 @@ onView(withText("6")).perform(click());
 onView(withText("=")).perform(click());
 onView(withId(R.id.resText)).check(matches(withText("42")));</code></pre>
 
-Selendroid
+####Selendroid#
 
 Selendroid is a relatively new kid on the block and can be used to functionally test your Android applications. Apparently if you are used to Selenium, Selendroid should be an easy way to use your knowledge of it to create your functional tests for Android. This blog will appear as a guest blog post on TechnoTalkative.com. Since all of the readers know that Paresh likes to find ways to be a lazy developer (while being productive) but still being functional, I feel that Selendroid will be a very useful functional testing framework. One of the pleasant features of it is that you can use a visual editor (or as they call it “Selendroid Inspector”) to click through your application to create your test steps. Obviously you will still need to do some work yourself but even that is fun on Selendroid.
 
 Below you will find an example of how a Selendroid test could look like:
 
-
-mSDriver.findElement(By.linkText("7")).click();
+<code><pre>mSDriver.findElement(By.linkText("7")).click();
 mSDriver.findElement(By.linkText("x")).click();
 mSDriver.findElement(By.linkText("6")).click();
-mSDriver.findElement(By.linkText("=")).click();
+mSDriver.findElement(By.linkText("=")).click();</code></pre>
  
-WebElement resText = mSDriver.findElement(By.id(“resText"));
-Assert.assertEquals(resText.getText(), "42");
+<code><pre>WebElement resText = mSDriver.findElement(By.id(“resText"));
+Assert.assertEquals(resText.getText(), "42");</code></pre>
 Robolectric
 
 Robolectric is a functional testing framework, that is in a way completely different to all previously described frameworks. It is different because tests that are run don’t run on either a device or emulator but they run on the JVM on your computer. I hear you wonder why this is good or bad. These questions will be answered in a future post but one spoiler will be given here and now. The tests run super fast so less waiting which gives you more time to do fun things!
