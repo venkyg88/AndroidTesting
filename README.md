@@ -19,10 +19,11 @@ As all unit tests are based on JUnit, extend your Unit tests with **junit.framew
 
 Use Junit’s assertEquals to check whether calling the calculate function has the desired result.
 
-public void testAGoodCalculation() {
+<pre><code>public void testAGoodCalculation() {
       MainActivity testClass = new MainActivity();
       assertEquals(42, testClass.calculate("7×6"));
 }
+</code></pre>
 Now to run the test in Android studio, or using gradle command:
 gradle connectedAndroidTest
 
