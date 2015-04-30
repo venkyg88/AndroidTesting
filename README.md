@@ -36,7 +36,6 @@ So JUnit test check
 assertTrue(foo.contains("someValue") && foo.contains("anotherValue")) 
 can be rewritten in Hamecrest to:
 <code><pre>assertThat(foo, hasItems("someValue", "anotherValue"));</pre></code>
-
 Other examples can be:
 <code><pre>assertThat(yoda).isInstanceOf(Jedi.class);
 assertThat(frodo.getName()).isEqualTo("Frodo");
@@ -81,7 +80,6 @@ Espresso has been introduced in 2013 by Google (Watch video: GTAC 2013: Espresso
 The principal behind Espresso is described in a JUnit way how information is handled in/with the view.
 So an Espresso test will look like:
 
-
 <code><pre>onView(withText(“7")).perform(click());
 onView(withText("×")).perform(click());
 onView(withText("6")).perform(click());
@@ -109,7 +107,6 @@ This is an example of how a Robolectric test could look like:
 mTestAct.findViewById(R.id.op_mul).performClick();
 mTestAct.findViewById(R.id.num_6).performClick(); 
 mTestAct.findViewById(R.id.op_equ).performClick();</pre></code>
- 
 <code><pre>EditText resultText = (EditText) mTestAct.findViewById(R.id.resText);
 assertEquals("42", resultText.getText().toString());</pre></code>
 ####In conclusion#
