@@ -33,24 +33,16 @@ When you have checks that are somewhat more complex, than you might want to use 
 
 So JUnit test check
 
-1
 assertTrue(foo.contains("someValue") && foo.contains("anotherValue")) 
 can be rewritten in Hamecrest to:
+<code><pre>assertThat(foo, hasItems("someValue", "anotherValue"));</pre></code>
 
-1
-assertThat(foo, hasItems("someValue", "anotherValue"));
 Other examples can be:
-
-1
-2
-3
-4
-5
-assertThat(yoda).isInstanceOf(Jedi.class);
+<code><pre>assertThat(yoda).isInstanceOf(Jedi.class);
 assertThat(frodo.getName()).isEqualTo("Frodo");
 assertThat(frodo).isNotEqualTo(sauron);
 assertThat(frodo).isIn(fellowshipOfTheRing);
-assertThat(sauron).isNotIn(fellowshipOfTheRing);
+assertThat(sauron).isNotIn(fellowshipOfTheRing);</code></pre>
 Functional testing
 
 Testing your UX is also a test technique you may want to use. Testing the UX, especially within Test Driven Development (a.k.a. TDD) will give you a good insight in the way the application will behave. Also if you change/re-factor your application, using functional test gives you a mechanism to check if the UX is still behaving like it is supposed to do.
@@ -63,18 +55,13 @@ The idea behind Robotium is that a functional test should description what the u
 
 An example of how a Robotium test could look like:
 
-1
-2
-3
-4
-5
-6
-mSolo.assertCurrentActivity("Started", MainActivity.class);
+
+<code><pre>mSolo.assertCurrentActivity("Started", MainActivity.class);
 mSolo.clickOnText("7");
 mSolo.clickOnText("×");
 mSolo.clickOnText("6");
 mSolo.clickOnText("=");
-assertTrue(mSolo.waitForText("42"));
+assertTrue(mSolo.waitForText("42"));</code></pre>
 
 ####Calabash#
 
@@ -82,11 +69,7 @@ Calabash is a functional testing framework that can be used for both iOS and And
 
 To get you interested in the ease of Calabash though this is a little example of how a functional test could look like:
 
-Feature: Hitchhiker's Guide
-     
-    Scenario: Answer to the Ultimate Question of Life 
-   the Universe and Everything
- 
+
         Given My app is running
         When I press the "7" button
             And I press the "×" button
@@ -101,11 +84,12 @@ The principal behind Espresso is described in a JUnit way how information is han
 So an Espresso test will look like:
 
 
-onView(withText(“7")).perform(click());
+<code><pre>onView(withText(“7")).perform(click());
 onView(withText("×")).perform(click());
 onView(withText("6")).perform(click());
 onView(withText("=")).perform(click());
-onView(withId(R.id.resText)).check(matches(withText("42")));
+onView(withId(R.id.resText)).check(matches(withText("42")));</code></pre>
+
 Selendroid
 
 Selendroid is a relatively new kid on the block and can be used to functionally test your Android applications. Apparently if you are used to Selenium, Selendroid should be an easy way to use your knowledge of it to create your functional tests for Android. This blog will appear as a guest blog post on TechnoTalkative.com. Since all of the readers know that Paresh likes to find ways to be a lazy developer (while being productive) but still being functional, I feel that Selendroid will be a very useful functional testing framework. One of the pleasant features of it is that you can use a visual editor (or as they call it “Selendroid Inspector”) to click through your application to create your test steps. Obviously you will still need to do some work yourself but even that is fun on Selendroid.
