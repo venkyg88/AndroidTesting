@@ -101,19 +101,19 @@ mSDriver.findElement(By.linkText("=")).click();</code></pre>
  
 <code><pre>WebElement resText = mSDriver.findElement(By.id(“resText"));
 Assert.assertEquals(resText.getText(), "42");</code></pre>
-Robolectric
+
+####Robolectric#
 
 Robolectric is a functional testing framework, that is in a way completely different to all previously described frameworks. It is different because tests that are run don’t run on either a device or emulator but they run on the JVM on your computer. I hear you wonder why this is good or bad. These questions will be answered in a future post but one spoiler will be given here and now. The tests run super fast so less waiting which gives you more time to do fun things!
 
 This is an example of how a Robolectric test could look like:
-
-mTestAct.findViewById(R.id.num_7).performClick();
+<code><pre>mTestAct.findViewById(R.id.num_7).performClick();
 mTestAct.findViewById(R.id.op_mul).performClick();
 mTestAct.findViewById(R.id.num_6).performClick(); 
-mTestAct.findViewById(R.id.op_equ).performClick();
+mTestAct.findViewById(R.id.op_equ).performClick();</pre></code>
  
-EditText resultText = (EditText) mTestAct.findViewById(R.id.resText);
-assertEquals("42", resultText.getText().toString());
+<code><pre>EditText resultText = (EditText) mTestAct.findViewById(R.id.resText);
+assertEquals("42", resultText.getText().toString());</pre></code>
 ####In conclusion#
 
 Testing of Android applications is a must. Which test framework you want to use, depends on the what you want to do with it. To choose which one fits best, ask yourself who is going to make the tests, what needs to be tested and/or on which device the tests are running. In any case, there is enough choice to start writing functional tests.
