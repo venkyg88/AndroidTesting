@@ -10,8 +10,8 @@ Testing is not a new technique during the development of Java software. Writing 
 Unit testing, which means analyzing a block of code and test against a particular aspect, within the Android ecosystem is done by using JUnit and the instrumentation framework.
 
 android testing frameworks
-<p>Source: <a href="http://developer.android.com/images/testing/test_framework.png" title="Title">
-</a></p>
+<p>Source: http://developer.android.com/images/testing/test_framework.png</p>
+
 ####JUnit#
 
 NOTE:*All examples mentioned below will use a basic Calculator app to tests against. All tests will try to calculate 7 times 6 .*
