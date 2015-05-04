@@ -3,14 +3,15 @@ A collection of samples demonstrating different frameworks and techniques for au
 Introduction
 -------------
 
-Testing is not a new technique during the development of Java software. Writing tests gives you a good understanding about the stability, quality and performance of an application or system. But what about testing when developing an Android application, is it also easy to achieve? There are different test types, like technical and functional tests, you may want to have your application tested. This article will show you different tools and frameworks you can use when developing your app. Showing you the basic details, usage and there pros and cons, so you can decide if it’s suitable for you to use.
+Testing is not a new technique during the development of Java software. Writing tests gives you a good understanding about the stability, quality and performance of an application or system. But what about testing when developing an Android application, is it also easy to achieve? There are different test types, like technical and functional tests, you may want to have your application tested. Let us discuss different tools and frameworks you can use when developing your app. Showing you the basic details, usage and there pros and cons. We propose and you can decide if it’s suitable for you to use.
 
 ###Technical testing#
 
 Unit testing, which means analyzing a block of code and test against a particular aspect, within the Android ecosystem is done by using JUnit and the instrumentation framework.
 
 android testing frameworks
-Source: http://developer.android.com/images/testing/test_framework.png
+<p>Source: <a href="http://developer.android.com/images/testing/test_framework.png" title="Title">
+</a></p>
 ####JUnit#
 
 NOTE:*All examples mentioned below will use a basic Calculator app to tests against. All tests will try to calculate 7 times 6 .*
