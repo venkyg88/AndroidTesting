@@ -52,7 +52,7 @@ Remark: All frameworks are briefly described and more in-depth information will 
 
 ####Robotium#
 
-The idea behind Robotium is that a functional test should description what the user sees and can do. This framework is a good choice if you are just “black box” testing your application. Besides extensive documentation, there are some well described examples available and the API is easy to use.
+The idea behind Robotium is that a functional test should describe what the user sees and can do. This framework is a good choice if you are just “black box” testing your application. Besides extensive documentation, there are some well described examples available and the API is easy to use.
 
 An example of how a Robotium test could look like:
 <code><pre>mSolo.assertCurrentActivity("Started", MainActivity.class);
@@ -64,7 +64,7 @@ assertTrue(mSolo.waitForText("42"));</code></pre>
 
 ####Calabash#
 
-Calabash is a functional testing framework that can be used for both iOS and Android functional testing. On paper it must be one of the easiest frameworks to use and even non-developers should be able to create functional tests using it. In a future blog post you will figure out why we find that this is not completely true.
+Calabash is a functional testing framework that can be used for both iOS and Android functional testing. On paper it must be one of the easiest frameworks to use and even non-developers should be able to create functional tests using it. Will talk more on this in the prescription document.
 
 To get you interested in the ease of Calabash though this is a little example of how a functional test could look like:
 
