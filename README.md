@@ -89,7 +89,7 @@ onView(withId(R.id.resText)).check(matches(withText("42")));</code></pre>
 
 ####Selendroid#
 
-Selendroid is a relatively new kid on the block and can be used to functionally test your Android applications. Apparently if you are used to Selenium, Selendroid should be an easy way to use your knowledge of it to create your functional tests for Android. This blog will appear as a guest blog post on TechnoTalkative.com. Since all of the readers know that Paresh likes to find ways to be a lazy developer (while being productive) but still being functional, I feel that Selendroid will be a very useful functional testing framework. One of the pleasant features of it is that you can use a visual editor (or as they call it “Selendroid Inspector”) to click through your application to create your test steps. Obviously you will still need to do some work yourself but even that is fun on Selendroid.
+Selendroid is a relatively new kid on the block and can be used to functionally test your Android applications. Apparently if you are used to Selenium, Selendroid should be an easy way to use your knowledge of it to create your functional tests for Android. One of the pleasant features of it is that you can use a visual editor (or as they call it “Selendroid Inspector”) to click through your application to create your test steps. Obviously you will still need to do some work yourself but even that is fun on Selendroid.
 
 Below you will find an example of how a Selendroid test could look like:
 <code><pre>mSDriver.findElement(By.linkText("7")).click();
@@ -101,7 +101,7 @@ Assert.assertEquals(resText.getText(), "42");</code></pre>
 
 ####Robolectric#
 
-Robolectric is a functional testing framework, that is in a way completely different to all previously described frameworks. It is different because tests that are run don’t run on either a device or emulator but they run on the JVM on your computer. I hear you wonder why this is good or bad. These questions will be answered in a future post but one spoiler will be given here and now. The tests run super fast so less waiting which gives you more time to do fun things!
+Robolectric is a functional testing framework, that is in a way completely different to all previously described frameworks. It is different because tests that are run don’t run on either a device or emulator but they run on the JVM on your computer. I hear you wonder why this is good or bad. These questions will be answered only once I get a chance to work on this. The tests run super fast so less waiting which gives you more time to do fun things!
 
 This is an example of how a Robolectric test could look like:
 <code><pre>mTestAct.findViewById(R.id.num_7).performClick();
