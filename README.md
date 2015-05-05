@@ -48,7 +48,7 @@ assertThat(sauron).isNotIn(fellowshipOfTheRing);</code></pre>
 
 Testing your UX is also a test technique you may want to use. Testing the UX, especially within Test Driven Development (a.k.a. TDD) will give you a good insight in the way the application will behave. Also if you change/re-factor your application, using functional test gives you a mechanism to check if the UX is still behaving like it is supposed to do.
 
-Remark: All frameworks are briefly described and more in-depth information will be available in future posts.
+Remark: All frameworks are briefly described and more in-depth information will be available When I have the complete information of all the contents.
 
 ####Robotium#
 
